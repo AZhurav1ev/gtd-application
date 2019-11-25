@@ -9,7 +9,7 @@ const SignedInLinks = (props) => {
         <>
             <Nav.Link as={NavLink} to="/create" className="text-uppercase">create</Nav.Link>
             <Nav.Link onClick={props.signOut} className="text-uppercase">logout</Nav.Link>
-            <Nav.Link as={NavLink} to="/" className="circle-link" ml="2">{props.profile.initials}</Nav.Link>
+            <Nav.Link as={NavLink} to="/" className="circle-link mx-auto my-0 ml-md-2">{props.profile.initials}</Nav.Link>
         </>
     )
 }

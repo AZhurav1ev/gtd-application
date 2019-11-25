@@ -20,6 +20,9 @@ const TaskMenu = () => {
                         <ListGroup.Item variant="light" action as={Link} to="/completed">
                             <h3 className="text-center text-uppercase font-weight-bold text-primary mx-0 my-0">Completed</h3>
                         </ListGroup.Item>
+                        <ListGroup.Item variant="light" action as={Link} to="/about">
+                            <h3 className="text-center text-uppercase font-weight-bold text-primary mx-0 my-0">About</h3>
+                        </ListGroup.Item>
                     </ListGroup>
                 </Col>
             </Row>

@@ -10,6 +10,7 @@ import SignUp from './components/auth/SignUp'
 import CompletedTasks from './components/tasks/CompletedTasks'
 import PriorityTasks from './components/tasks/PriorityTasks'
 import EditTask from './components/tasks/EditTask'
+import { About } from './components/about/About'
 
 function App() {
   return (
@@ -19,13 +20,14 @@ function App() {
         <Switch>
           <Route exact path="/" component={Dashboard} />
           <Route path="/task/:id" component={TaskDetails} />
+          <Route path="/about" component={About} />
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
           <Route path="/create" component={CreateTask} />
           <Route path="/completed" component={CompletedTasks} />
           <Route path="/priority" component={PriorityTasks} />
           <Route path="/edit/:id" component={EditTask} />
-          <Route render={() => <Redirect to='/' /> } />
+          <Route render={() => <Redirect to='/' />} />
         </Switch>
       </div>
     </BrowserRouter>
