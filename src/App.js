@@ -10,7 +10,7 @@ import SignUp from './components/auth/SignUp'
 import CompletedTasks from './components/tasks/CompletedTasks'
 import PriorityTasks from './components/tasks/PriorityTasks'
 import EditTask from './components/tasks/EditTask'
-import { About } from './components/about/About'
+import About from './components/about/About'
 
 function App() {
   return (
