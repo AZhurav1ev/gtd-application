@@ -1,9 +1,12 @@
 import React from 'react'
 import { Container, Row, Col} from 'react-bootstrap'
 import TaskMenu from '../tasks/TaskMenu'
+import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 
-
-export const About = () => {
+const About = (props) => {
+    const { auth } = props;
+    if (!auth.uid) return <Redirect to='/signin' />;
     return (
         <Container>
             <Row className="mt-3">
@@ -31,8 +34,13 @@ export const About = () => {
                             <img src="/img/React-bootstrap.png" alt="React-bootstrap" height="100" className="ml-3" />
                         </Col>
                     </Row>
-                    <Row className="mt-5" >
-                        <Col>
+                    <Row className="mt-3" >
+                        <Col className="col-12">
+                            <p className="text-center text-muted">
+                                Also, you could review this app or pick it apart by downloading the code from <a href="https://github.com/AZhurav1ev/gtd-application">GitHub</a>   
+                            </p>
+                        </Col>
+                        <Col className="col-12 mt-3">
                             <h4 className="text-center text-muted">Thank you for visit!</h4>
                         </Col>
                     </Row>
@@ -42,3 +50,10 @@ export const About = () => {
     )
 }
 
+const mapStateToProps = (state) => {
+    return {
+        auth: state.firebase.auth
+    }
+}
+
+export default connect(mapStateToProps)(About);
